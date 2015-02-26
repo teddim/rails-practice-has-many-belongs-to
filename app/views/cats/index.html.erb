@@ -8,6 +8,9 @@
       <th>
         Name
       </th>
+      <th>
+
+      </th>
     </tr>
   </thead>
   <tbody>
@@ -15,6 +18,15 @@
       <tr>
         <td>
           <%= link_to cat.name, cat_path(cat) %>
+        </td>
+        <td>
+          <% cat.toys.each do |toy| %>
+            <ul>
+            <li><%= toy.name %></li> 
+            </ul>
+
+
+          <% end %>
         </td>
       </tr>
     <% end %>
